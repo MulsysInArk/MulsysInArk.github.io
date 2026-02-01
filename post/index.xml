@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elaina_Sama的旅行日志</title>
+    <link>http://localhost:1313/post/</link>
+    <description>Recent content from Elaina_Sama的旅行日志</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    
+    <managingEditor>1724711383@qq.com (Elaina_Sama)</managingEditor>
+    <webMaster>1724711383@qq.com (Elaina_Sama)</webMaster>
+    
+    <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
+    
+    <lastBuildDate>Sun, 01 Feb 2026 01:35:23 +0800</lastBuildDate>
+    
+    
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss&#43;xml" />
+    
+
+    
+    
+
+    <item>
+      <title>反应检测逃课程序</title>
+      <link>http://localhost:1313/post/auto_shoot/</link>
+      <pubDate>Sun, 01 Feb 2026 01:35:23 &#43;0800</pubDate>
+      <author>1724711383@qq.com (Elaina_Sama)</author>
+      <guid>http://localhost:1313/post/auto_shoot/</guid>
+      <description>
+        <![CDATA[<h1>反应检测逃课程序</h1><p>作者：Elaina_Sama（1724711383@qq.com）</p>
+        
+          <p>🔫 C语言实现像素检测变化自动点击</p>
+<h1 id="auto_shoot">
+<a class="header-anchor" href="#auto_shoot"></a>
+auto_shoot
+</h1><p>项目仓库地址：<a href="https://github.com/MulsysInArk/auto_shoot.git" title="auto_shoot项目地址">https://github.com/MulsysInArk/auto_shoot.git</a></p>
+<h2 id="背景">
+<a class="header-anchor" href="#%e8%83%8c%e6%99%af"></a>
+背景
+</h2><pre><code>QQ群之前有个反应测试很火，所以想试试使用c语言能有多快。
+</code></pre>
+<p>不过这个无法用于完美反应测试，因为实测像素提取出来就直接是(0,0,0)
+不知道完美用了什么妖术。</p>
+<h2 id="效果">
+<a class="header-anchor" href="#%e6%95%88%e6%9e%9c"></a>
+效果
+</h2><pre><code>检测画面像素变化，自动点击，让人人都能实现25ms，当一把天才少年
+</code></pre>
+<h2 id="介绍">
+<a class="header-anchor" href="#%e4%bb%8b%e7%bb%8d"></a>
+介绍
+</h2><pre><code>auto_shoot 使用说明
+</code></pre>
+<p>功能
+截取屏幕中心单个像素，匹配预设绿色 R=103, G=194, B=58 时自动点击左键。
+每隔约 30 帧在控制台打印中心像素 RGB，便于调准。
+数字键 0 切换检测开/关，未开启时会在屏幕中心显示穿透窗口的小圆点。
+编译
+gcc main.c -o auto_shoot.exe -lgdi32 -luser32
+如需隐藏控制台窗口：
+gcc main.c -o auto_shoot.exe -lgdi32 -luser32 -mwindows
+运行步骤
+启动程序，看到屏幕中心的小圆点。
+将游戏准星对准该点（建议窗口化/无边框）。
+按 0 开启检测；再次按 0 关闭；Ctrl+C 退出。
+控制台实时显示中心像素值，匹配绿色即点击。
+颜色阈值说明
+当前严格匹配 RGB(103,194,58)。若需要更宽容，可放宽 is_green_character_pixel 内的阈值。
+注意事项
+自动点击可能被游戏的反作弊检测，使用前请了解风险。
+需在前台运行目标游戏窗口，否则取色可能不准确。</p>
+        
+        <hr><p>本文2026-02-01首发于<a href='http://localhost:1313/'>Elaina_Sama的旅行日志</a>，最后修改于2026-02-01</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>mp4体积压缩程序</title>
+      <link>http://localhost:1313/post/mp4%E4%BD%93%E7%A7%AF%E5%8E%8B%E7%BC%A9%E7%A8%8B%E5%BA%8F/</link>
+      <pubDate>Sun, 01 Feb 2026 01:35:23 &#43;0800</pubDate>
+      <author>1724711383@qq.com (Elaina_Sama)</author>
+      <guid>http://localhost:1313/post/mp4%E4%BD%93%E7%A7%AF%E5%8E%8B%E7%BC%A9%E7%A8%8B%E5%BA%8F/</guid>
+      <description>
+        <![CDATA[<h1>mp4体积压缩程序</h1><p>作者：Elaina_Sama（1724711383@qq.com）</p>
+        
+          <p>💽 Rust + ffmpeg实现mp4的高压缩</p>
+<h1 id="mp4_smaller_rust">
+<a class="header-anchor" href="#mp4_smaller_rust"></a>
+mp4_smaller_rust
+</h1><p>项目仓库地址：<a href="https://github.com/MulsysInArk/mp4_smaller_rust.git" title="mp4_smaller_rust项目地址">https://github.com/MulsysInArk/mp4_smaller_rust.git</a></p>
+<h2 id="背景">
+<a class="header-anchor" href="#%e8%83%8c%e6%99%af"></a>
+背景
+</h2><p>由于QQ群里老是有群友发个几百MB的视频，大家都不愿意看。
+有时候
+1、录集锦体积也挺大的，但是又有人发20多分钟的猫和老鼠，才10MB。
+2、网络上难找到在线极限压缩视频体积的网站
+所以我使用RUST+ffmpeg使用cursor写了个二次压缩的程序，并且打包成了exe可以直接使用。</p>
+<h2 id="效果">
+<a class="header-anchor" href="#%e6%95%88%e6%9e%9c"></a>
+效果
+</h2><p>64M-&gt;1.18M 230M-&gt;60M，画质和音质会有些许失真，但是在手机上浏览影响不大</p>
+<h2 id="介绍">
+<a class="header-anchor" href="#%e4%bb%8b%e7%bb%8d"></a>
+介绍
+</h2><p>mp4_smaller_rust
+功能： 本程序基于ffmpeg，ffprobe将大体积的mp4文件强行压缩到小体积，例如：64M-&gt;1.18M 230M-&gt;60M
+环境： 使用前需要先下载ffmpeg，ffprobe并将.\bin文件夹加载在系统环境变量 在cmd中输入ffmepg，ffprobe验证安装是否成功
+使用方法： 使用.exe，将input.mp4和mp4_shrink.exe放在一个文件夹 .\mp4_shrink.exe input.mp4 output.mp4 &ndash;target-bytes 10000000</p>
+<p>使用rust源码，将input.mp4放在mp4_smaller_rust文件夹 cargo run &ndash;release &ndash; input.mp4 output.mp4 &ndash;target-bytes 100000000</p>
+        
+        <hr><p>本文2026-02-01首发于<a href='http://localhost:1313/'>Elaina_Sama的旅行日志</a>，最后修改于2026-02-01</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>Hello World</title>
+      <link>http://localhost:1313/post/hello/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      <author>1724711383@qq.com (Elaina_Sama)</author>
+      <guid>http://localhost:1313/post/hello/</guid>
+      <description>
+        <![CDATA[<h1>Hello World</h1><p>作者：Elaina_Sama（1724711383@qq.com）</p>
+        
+          <p>💘 博麗 霊夢 💘</p>
+<p>title	标题	string	-	Hugo 内置</p>
+<p>date	文章创建时间	datetime	-	Hugo 内置</p>
+<p>lastmod	文章最后修改时间	datetime	-	Hugo 内置</p>
+<p>summary	文章摘要	string	-	Hugo 内置</p>
+<p>weight	文章权重，用于排序/置顶	int	-	Hugo 内置<br>
+categories	文章分类	string[]	-	0.0.1<br>
+tags	文章标签	string[]	-	0.0.1<br>
+description	文章描述	string	-	0.0.1<br>
+mermaid	是否开启 mermaid，需配合 mermaid 配置一起使用	boolean	false	0.0.1<br>
+math	是否开启 LaTeX，需配合 math 配置一起使用	boolean	false	0.0.1<br>
+link	用于文章直接指向外部链接	string	-	0.0.1<br>
+copyright	是否开启文章版权声明	boolean	不传默认走全局配置	0.0.1<br>
+sponsor	是否开启文章赞助	boolean	不传默认走全局配置	0.0.1<br>
+comments	是否开启文章评论	boolean	不传默认走全局配置	0.0.1<br>
+photos	文章照片墙	string[]	-	0.0.1<br>
+sidebar	文章侧边栏位置	false | &rsquo;left&rsquo; | &lsquo;right&rsquo;	不传默认走全局配置	0.5.0<br>
+toc	是否开启文章目录	boolean	不传默认走全局配置	0.7.0<br>
+outdated	文章是否过期	boolean	不传默认走全局配置	0.13.1<br>
+author	文章作者，用于文章版权和分享卡片	string	不传默认走全局配置	0.13.2<br>
+keywords	文章关键词	string[] | string	不传默认走全局配置	0.13</p>
+        
+        <hr><p>本文2023-03-15首发于<a href='http://localhost:1313/'>Elaina_Sama的旅行日志</a>，最后修改于2023-03-15</p>]]>
+      </description>
+      
+    </item>
+    
+  </channel>
+</rss>
